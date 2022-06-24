@@ -1,0 +1,276 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --mainColor: #0c79f9;
+  --secundaryColor: #ffff;
+  --bodyColor: #000;
+}
+
+body {
+  background: var(--bodyColor);
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: var(--secundaryColor);
+  text-decoration: none;
+  font-size: 40px;
+}
+
+/* HEADER NAV */
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px;
+}
+nav button {
+  background-color: var(--bodyColor);
+  color: var(--mainColor);
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--mainColor);
+}
+nav button p {
+  font-weight: bold;
+  font-size: 20px;
+}
+.redesHeader img {
+  padding: 8px;
+  height: 64px;
+  width: 64px;
+}
+
+/* CARDS PRINCIPAL */
+.cardContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.cardContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blur {
+  position: absolute;
+  width: 708px;
+  height: 438px;
+  background: var(--mainColor);
+  bottom: 0;
+  opacity: 20%;
+}
+
+.cardContainer img {
+  width: 708px;
+  height: 438px;
+}
+
+.cardTitle p {
+  border-radius: 1rem 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: white;
+  bottom: 20px;
+  left: 120px;
+  z-index: 100;
+  font-size: 30px;
+}
+/* FORM CONTACT */
+#formContainer {
+  margin: 50px 0px;
+  background-image: url("/img/infinite.svg");
+}
+form input,
+form textarea {
+  background-color: var(--bodyColor);
+  border: 2px solid var(--mainColor);
+  padding: 3px;
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--mainColor);
+  font-size: 20px;
+}
+.formContainer_row {
+  display: flex;
+  justify-content: center;
+}
+#form {
+  display: grid;
+  grid-template-areas:
+    "nombre apellido contacto"
+    "empresa consulta contacto"
+    "email telefono contacto"
+    "texto texto contacto"
+    "boton boton contacto";
+  gap: 40px;
+  width: 70%;
+  margin-left: 30px;
+}
+
+#nombre {
+  grid-area: nombre;
+}
+
+#apellido {
+  grid-area: apellido;
+}
+#empresa {
+  grid-area: empresa;
+}
+
+#consulta {
+  grid-area: consulta;
+}
+#email {
+  grid-area: email;
+}
+
+#telefono {
+  grid-area: telefono;
+}
+#contacto {
+  grid-area: contacto;
+  width: 40%;
+}
+#boton {
+  grid-area: boton;
+  background-color: var(--mainColor);
+  color: var(--secundaryColor);
+  border: 0;
+  padding: 10px;
+  margin-bottom: 30px;
+  height: 40px;
+  font-size: 20px;
+}
+#texto {
+  grid-area: texto;
+}
+#nombre,
+#apellido,
+#empresa,
+#consulta,
+#email,
+#telefono,
+#texto {
+  padding: 10px;
+}
+.contactDiv {
+  color: var(--secundaryColor);
+}
+.contactDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.contactDiv a {
+  font-size: 6rem;
+  padding-bottom: 30px;
+}
+.contactDiv_general {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.contactDiv_wsp,
+.contactDiv_Email {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  font-size: 20px;
+}
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--mainColor);
+  height: 200px;
+}
+footer img {
+  width: 50px;
+  height: 50px;
+}
+.footerBtn {
+  background-color: var(--mainColor);
+  color: var(--secundaryColor);
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--secundaryColor);
+}
+.poligono {
+  width: 0%;
+  height: 0;
+  margin: auto;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 100px solid var(--secundaryColor);
+}
+
+@media screen and (max-width: 1680px) {
+  .cardContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .cardContainer img {
+    height: 300px;
+    width: 400px;
+  }
+  .contactDiv a {
+    font-size: 40px;
+  }
+  .contactDiv_wsp,
+  .contactDiv_Email {
+    margin: 15px;
+    font-size: 15px;
+  }
+  #form {
+    width: 50%;
+  }
+  form input::placeholder,
+  form textarea::placeholder {
+    font-size: 15px;
+  }
+  nav button p {
+    font-size: 15px;
+  }
+  .blur {
+    width: 400px;
+    height: 300px;
+  }
+  .redesHeader {
+    margin-left: 120px;
+  }
+  .cardTitle p {
+    bottom: 20px;
+    left: 45px;
+    font-size: 20px;
+  }
+}
