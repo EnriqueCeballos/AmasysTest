@@ -231,6 +231,10 @@ footer img {
 }
 
 @media screen and (max-width: 1680px) {
+  a {
+    font-size: 25px;
+  }
+
   .cardContent {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
@@ -240,8 +244,8 @@ footer img {
     margin: 20px;
   }
   .cardContainer img {
-    height: 300px;
-    width: 400px;
+    height: 250px;
+    width: 350px;
   }
   .contactDiv a {
     font-size: 40px;
@@ -252,25 +256,65 @@ footer img {
     font-size: 15px;
   }
   #form {
-    width: 50%;
+    gap: 8px;
+    width: auto;
+    margin-left: 6px;
+    justify-content: center;
   }
   form input::placeholder,
   form textarea::placeholder {
     font-size: 15px;
   }
-  nav button p {
-    font-size: 15px;
+  nav button,
+  .footerBtn {
+    margin-left: 20px;
+    height: auto;
+    width: auto;
+  }
+  nav button p,
+  .footerBtn {
+    font-size: 12px;
+    padding: 5px;
   }
   .blur {
-    width: 400px;
-    height: 300px;
+    width: 350px;
+    height: 250px;
   }
   .redesHeader {
-    margin-left: 120px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+  }
+  .redesHeader img {
+    height: 40px;
+    width: 40px;
   }
   .cardTitle p {
     bottom: 20px;
     left: 45px;
     font-size: 20px;
+  }
+  #formContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .formContainer_row {
+    display: block;
+  }
+  #nombre,
+  #apellido,
+  #empresa,
+  #consulta,
+  #email,
+  #telefono,
+  #texto {
+    padding: 4px;
+  }
+  #contacto {
+    display: flex;
+    width: 100%;
+  }
+  #texto {
+    width: 100%;
   }
 }
