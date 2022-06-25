@@ -196,6 +196,7 @@ form textarea::placeholder {
 #texto {
   padding: 12px 32px;
   background-color: transparent;
+  color: white;
 }
 
 .contactDiv {
