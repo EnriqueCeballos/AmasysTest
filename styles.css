@@ -112,7 +112,7 @@ nav button {
 /* FORM CONTACT */
 #formContainer {
   padding: 73px 122px;
-  background: url("/img/infinite.svg") no-repeat;
+  background: url("./img/infinite.svg") no-repeat;
   justify-content: space-evenly;
   width: 100%;
   display: flex;
@@ -196,6 +196,7 @@ form textarea::placeholder {
 #texto {
   padding: 12px 32px;
   background-color: transparent;
+  color: white;
 }
 
 .contactDiv {
@@ -230,13 +231,10 @@ form textarea::placeholder {
   width: 343px;
   margin-top: -45px;
 }
-.whatsappIcon {
+.whatsappIcon,.emailIcon {
   height: 50px;
   width: 49.7px;
-}
-.emailIcon {
-  height: 45px;
-  width: 45px;
+  margin-right: 20px;
 }
 /* FOOTER */
 footer {
