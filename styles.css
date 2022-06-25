@@ -112,7 +112,7 @@ nav button {
 /* FORM CONTACT */
 #formContainer {
   padding: 73px 122px;
-  background: url("/img/infinite.svg") no-repeat;
+  background: url("./img/infinite.svg") no-repeat;
   justify-content: space-evenly;
   width: 100%;
   display: flex;
