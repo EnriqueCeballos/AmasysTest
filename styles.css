@@ -6,29 +6,30 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --mainColor: #0c79f9;
+  --mainColor: #0169fe;
   --secundaryColor: #ffff;
   --bodyColor: #000;
 }
-
+.rigth {
+  justify-self: right;
+}
 body {
   background: var(--bodyColor);
   display: flex;
   flex-direction: column;
 }
-a {
-  color: var(--secundaryColor);
-  text-decoration: none;
-  font-size: 40px;
-}
 
 /* HEADER NAV */
+header {
+  margin-bottom: 142px;
+}
 nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin: 30px;
+  height: 100px;
+  padding: 0 100px;
 }
 nav button {
   background-color: var(--bodyColor);
@@ -40,76 +41,97 @@ nav button {
   align-items: center;
   border: 2px solid var(--mainColor);
 }
-nav button p {
-  font-weight: bold;
-  font-size: 20px;
+.redesHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 68px;
 }
 .redesHeader img {
-  padding: 8px;
-  height: 64px;
-  width: 64px;
+  height: 44px;
+}
+
+.btnHeaderWsp {
+  height: 46px;
+  width: 328px;
+  padding: 12px 32px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 /* CARDS PRINCIPAL */
 .cardContent {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 90px;
+  column-gap: 24px;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin-bottom: 58px;
+  width: 100%;
 }
 .cardContainer {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .blur {
   position: absolute;
-  width: 708px;
-  height: 438px;
-  background: var(--mainColor);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #0169fe 0%,
+    rgba(1, 105, 254, 0.45) 0.01%,
+    rgba(1, 105, 254, 0.75) 100%
+  );
   bottom: 0;
-  opacity: 20%;
+  left: 0;
+  top: 0;
 }
 
 .cardContainer img {
-  width: 708px;
-  height: 438px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.cardTitle p {
+.cardTitle {
   border-radius: 1rem 0 0 1rem;
   display: flex;
   flex-direction: column;
   position: absolute;
   color: white;
-  bottom: 20px;
-  left: 120px;
+  bottom: 40px;
+  left: 16px;
   z-index: 100;
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: 500;
 }
 /* FORM CONTACT */
 #formContainer {
-  margin: 50px 0px;
-  background-image: url("/img/infinite.svg");
+  padding: 73px 122px;
+  background: url("/img/infinite.svg") no-repeat;
+  justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  background-position-x: 50%;
+  background-size: cover;
+  flex-direction: row;
 }
 form input,
 form textarea {
   background-color: var(--bodyColor);
   border: 2px solid var(--mainColor);
-  padding: 3px;
 }
 form input::placeholder,
 form textarea::placeholder {
   color: var(--mainColor);
   font-size: 20px;
+  padding: 12px 32px;
 }
-.formContainer_row {
-  display: flex;
-  justify-content: center;
-}
+
 #form {
   display: grid;
   grid-template-areas:
@@ -119,8 +141,8 @@ form textarea::placeholder {
     "texto texto contacto"
     "boton boton contacto";
   gap: 40px;
-  width: 70%;
-  margin-left: 30px;
+  width: 60%;
+  margin-right: 145px;
 }
 
 #nombre {
@@ -153,13 +175,17 @@ form textarea::placeholder {
   background-color: var(--mainColor);
   color: var(--secundaryColor);
   border: 0;
-  padding: 10px;
-  margin-bottom: 30px;
-  height: 40px;
+  padding: 12px 48px;
+  height: 56px;
+  width: 318px;
   font-size: 20px;
+  justify-self: center;
 }
 #texto {
   grid-area: texto;
+  background-color: transparent;
+  margin-top: 40px;
+  resize: none;
 }
 #nombre,
 #apellido,
@@ -168,35 +194,49 @@ form textarea::placeholder {
 #email,
 #telefono,
 #texto {
-  padding: 10px;
+  padding: 12px 32px;
+  background-color: transparent;
 }
+
 .contactDiv {
   color: var(--secundaryColor);
-}
-.contactDiv {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
-.contactDiv a {
-  font-size: 6rem;
-  padding-bottom: 30px;
-}
+
 .contactDiv_general {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
 }
+
+.contactDiv_Email,
+.contactDiv_Email h3,
 .contactDiv_wsp,
-.contactDiv_Email {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.contactDiv_wsp h3 {
   flex-direction: column;
-  margin: 20px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.contactDiv_Email p,
+.contactDiv_wsp p {
+  font-size: 18px;
+  font-weight: 600;
+}
+.logoContact {
+  width: 343px;
+  margin-top: -45px;
+}
+.whatsappIcon {
+  height: 50px;
+  width: 49.7px;
+}
+.emailIcon {
+  height: 45px;
+  width: 45px;
 }
 /* FOOTER */
 footer {
@@ -205,101 +245,47 @@ footer {
   align-items: center;
   justify-content: space-around;
   background: var(--mainColor);
-  height: 200px;
+  height: 100px;
 }
-footer img {
-  width: 50px;
-  height: 50px;
-}
+
 .footerBtn {
   background-color: var(--mainColor);
   color: var(--secundaryColor);
-  height: 50px;
-  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid var(--secundaryColor);
-}
-.poligono {
-  width: 0%;
-  height: 0;
-  margin: auto;
-  border-right: 50px solid transparent;
-  border-left: 50px solid transparent;
-  border-bottom: 100px solid var(--secundaryColor);
+  height: 46px;
+  width: 328px;
+  padding: 12px 32px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
-@media screen and (max-width: 1680px) {
-  a {
-    font-size: 25px;
+@media (max-width: 1200px) {
+}
+@media (max-width: 992px) {
+  /* NAV */
+  nav {
+    padding: 0;
   }
-
-  .cardContent {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-  }
-  .cardContainer img {
-    height: 250px;
-    width: 350px;
-  }
-  .contactDiv a {
-    font-size: 40px;
-  }
-  .contactDiv_wsp,
-  .contactDiv_Email {
-    margin: 15px;
-    font-size: 15px;
-  }
+  /* FORM */
   #form {
-    gap: 8px;
-    width: auto;
-    margin-left: 6px;
-    justify-content: center;
+    grid-template-areas:
+      "nombre apellido "
+      "empresa consulta "
+      "email telefono "
+      "texto texto"
+      "boton boton";
   }
   form input::placeholder,
   form textarea::placeholder {
-    font-size: 15px;
-  }
-  nav button,
-  .footerBtn {
-    margin-left: 20px;
-    height: auto;
-    width: auto;
-  }
-  nav button p,
-  .footerBtn {
-    font-size: 12px;
-    padding: 5px;
-  }
-  .blur {
-    width: 350px;
-    height: 250px;
-  }
-  .redesHeader {
-    margin-left: 25px;
-    display: flex;
-    flex-direction: row;
-  }
-  .redesHeader img {
-    height: 40px;
-    width: 40px;
-  }
-  .cardTitle p {
-    bottom: 20px;
-    left: 45px;
     font-size: 20px;
+    padding: 7px 7px;
   }
-  #formContainer {
-    display: flex;
-    flex-direction: column;
-  }
-  .formContainer_row {
-    display: block;
+  .emailIcon,
+  .whatsappIcon {
+    margin-right: 20px;
   }
   #nombre,
   #apellido,
@@ -308,13 +294,188 @@ footer img {
   #email,
   #telefono,
   #texto {
-    padding: 4px;
+    padding: 18px 32px;
   }
-  #contacto {
-    display: flex;
+  #formContainer {
+    margin-bottom: 50px;
+  }
+  /* CONTACT */
+  .contactDiv_Email,
+  .contactDiv_wsp {
+    width: 200px;
+  }
+  .contactDiv_Email h3,
+  .contactDiv_wsp h3 {
+    font-size: 25px;
+  }
+  .contactDiv_Email p,
+  .contactDiv_wsp p {
+    font-size: 20px;
+  }
+
+  /* FOOTER */
+  .redesHeader,
+  .redesHeader img {
+    height: 30px;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    margin-bottom: 100px;
+  }
+
+  .redesHeader,
+  .redesHeader img {
+    height: 30px;
+    gap: 10px;
+  }
+  .btnHeaderWsp {
+    width: 200px;
+    font-size: 14px;
+  }
+  /* CARDS */
+  .cardTitle {
+    font-size: 25px;
+  }
+  /* FORM */
+  #form {
+    margin: 0;
+    grid-template-areas:
+      "nombre"
+      "apellido "
+      "empresa" "consulta "
+      "email" "telefono "
+      "texto"
+      "boton";
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  form input::placeholder,
+  form textarea::placeholder {
+    font-size: 20px;
+    padding: 7px 20px;
+  }
+
+  #formContainer {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 0;
     width: 100%;
   }
   #texto {
+    margin: 0;
+  }
+  #nombre,
+  #apellido,
+  #empresa,
+  #consulta,
+  #email,
+  #telefono,
+  #texto {
+    padding: 12px 4px;
+  }
+  /* CONTACT */
+
+  .contactDiv_wsp,
+  .contactDiv_Email {
+    margin: 15px;
+    font-size: 15px;
+  }
+  #contacto {
     width: 100%;
+    margin-top: 60px;
+  }
+  .logoContact {
+    margin-top: 0;
+  }
+  .contactDiv_Email,
+  .contactDiv_wsp {
+    width: 180px;
+  }
+  .contactDiv_Email h3,
+  .contactDiv_wsp h3 {
+    font-size: 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 0;
+  }
+  .redesHeader,
+  .redesHeader img {
+    height: 30px;
+    gap: 10px;
+  }
+  .footerBtn {
+    width: 200px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  /* NAV */
+  nav {
+    padding: 0;
+  }
+
+  .btnHeaderWsp {
+    width: 200px;
+    font-size: 14px;
+  }
+
+  /* CARDS */
+  .cardContainer {
+    height: 300px;
+  }
+
+  .cardContent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  /* FORM */
+
+  form input::placeholder,
+  form textarea::placeholder {
+    font-size: 15px;
+    padding: 6px 20px;
+  }
+
+  #formContainer {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 0;
+    width: 100%;
+  }
+  #texto {
+    margin: 0;
+  }
+  #nombre,
+  #apellido,
+  #empresa,
+  #consulta,
+  #email,
+  #telefono,
+  #texto {
+    padding: 12px 4px;
+  }
+  /* CONTACT */
+  .logoContact {
+    width: 280px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 0;
+  }
+  .redesHeader,
+  .redesHeader img {
+    height: 30px;
+    gap: 10px;
   }
 }
