@@ -479,3 +479,35 @@ footer {
     gap: 10px;
   }
 }
+@media (max-width: 400px) {
+  .logo {
+    height: 60px;
+  }
+  .btnHeaderWsp {
+    width: 100px;
+    font-size: 10px;
+  }
+
+  .redesHeader img {
+    height: 20px;
+    gap: 5px;
+  }
+  #formContainer {
+    margin-top: 30px;
+  }
+  .logoContact {
+    width: 200px;
+  }
+  .contactDiv_Email h3,
+  .contactDiv_wsp h3 {
+    font-size: 15px;
+  }
+  .contactDiv_Email p,
+  .contactDiv_wsp p {
+    font-size: 12px;
+  }
+  .footerBtn {
+    width: 100px;
+    font-size: 10px;
+  }
+}
